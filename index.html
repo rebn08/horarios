@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Generador de Horarios · FIME Monclova</title>
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-slate-100 text-slate-900 text-base">
+<header class="bg-blue-900 text-white p-3">
+  <h1 class="text-xl font-bold">📅 Generador de Horarios · FIME Monclova · UAdeC</h1>
+  <div class="flex flex-wrap gap-2 mt-2 text-sm">
+    <button data-act="expP" class="bg-white/20 rounded-lg px-3 py-2">⬇ Exportar proyecto (.json)</button>
+    <button data-act="impP" class="bg-white/20 rounded-lg px-3 py-2">⬆ Importar proyecto</button>
+    <button data-act="tpl" class="bg-white/20 rounded-lg px-3 py-2">📄 Descargar plantillas Excel</button>
+    <button data-act="impX" class="bg-white/20 rounded-lg px-3 py-2">📥 Cargar Excel (.xlsx)</button>
+    <button data-act="demo" class="bg-white/20 rounded-lg px-3 py-2">✨ Datos de ejemplo</button>
+    <button data-act="reset" class="bg-red-500/70 rounded-lg px-3 py-2">🗑 Borrar todo</button>
+  </div>
+  <nav class="flex gap-1 mt-3 overflow-x-auto" id="nav"></nav>
+</header>
+<main id="main" class="p-3 max-w-[1500px] mx-auto"></main>
+<div id="toast" hidden></div>
+<div id="cap" style="position:fixed;left:-9999px;top:0"></div>
+<input type="file" id="fP" accept=".json" hidden><input type="file" id="fX" accept=".xlsx,.xls" hidden>
+<script src="js/app.js"></script>
+</body></html>
